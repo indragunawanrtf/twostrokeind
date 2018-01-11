@@ -1,0 +1,56 @@
+<body class="blue-grey lighten-5">
+  <main style="padding-top: 1rem">
+    <section id="login">
+      <div class="container-fluid pt-4">
+        <div class="row">
+          <div class="col s4 offset-s4">
+            <div class="login-form">
+              <div class="card hoverable">
+                <div class="card-content blue-grey lighten-5">
+                  <span class="card-title">
+                    <center><h2>Sign up</h2></center>
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <%= devise_error_messages! %>
+
+                      <div class="form-input row">
+                        <div class="input-field">
+                          <%= f.label :email %>
+                          <%= f.email_field :email, autofocus: true %>
+                        </div>
+
+                        <div class="input-field">
+                          <%= f.label :password %>
+                          <%= f.password_field :password, autocomplete: "off" %>
+                        </div>
+
+                        <div class="input-field">
+                          <%= f.label :password_confirmation %>
+                          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                        </div>
+
+                        <div class="actions center">
+                          <%= f.submit "Sign up", class: 'btn c-btn--large c-btn--red c-btn--block' %>
+                        </div>
+                        </br>
+                        <div class="c-separator">
+                          <span class="c-separator__text"></span>
+                        </div>
+                        <br>
+                      <% end %>
+
+                      <%= render "devise/shared/links" %>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+
+
+

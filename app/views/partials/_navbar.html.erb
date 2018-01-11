@@ -1,0 +1,19 @@
+<header class="navbar-fixed">
+  <nav class="indigo darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">2Stroke Indonesia</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="site-nav__link dropdown-button" data-activates="dropdown1" data-beloworigin="true" data-constrainwidth="false" data-hover="true"><i class="material-icons left">home</i>Home</a></li>
+        <li><a class="site-nav__link dropdown-button" data-activates="dropdown2" data-beloworigin="true" data-constrainwidth="false" data-hover="true"><i class="material-icons left">chat</i>Forum</a></li>
+        <% if !user_signed_in? %>
+          <li><%= link_to 'Masuk', new_user_session_path %></li>
+          <li><%= link_to 'Daftar', new_user_registration_path, class: 'btn waves-effect waves-light blue darken-1' %></li>
+        <% else %>
+          <li><a class="site-nav__link dropdown-button" data-activates="dropdown3" data-beloworigin="true" data-constrainwidth="false" data-hover="true"><i class="material-icons left">person_pin</i><%= current_user.name%></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<%= render 'partials/dropdown' %>

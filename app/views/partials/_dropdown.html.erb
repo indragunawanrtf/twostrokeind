@@ -1,0 +1,14 @@
+<ul id="dropdown1" class="dropdown-content hover">
+  <li><%= link_to 'Home', root_path %></li>
+  <li><a href="#">Profile</a></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content hover">
+  <li><a href="#">Forum Diskusi</a></li>
+  <li><a href="#">Forum Jual Beli</a></li>
+</ul>
+
+<ul id="dropdown3" class="dropdown-content hover">
+  <li><%= link_to 'My Profile', edit_user_registration_path %></li>
+  <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: "Apakah kamu yakin ingin keluar"  }  %></li>
+</ul>

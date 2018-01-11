@@ -3,12 +3,32 @@
   <head>
     <title>Welcome To 2 Stroke Indonesia</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'o.png' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
+  
   <body>
-    <%= yield %>
+    <%= render 'partials/navbar' %>
+    
+
+    <div class="">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+
   </body>
+  
+  <script type="script/javascripts">
+    $(".button-collapse").sideNav();
+    $( document ).ready(function)
+    $(".dropdown-button").dropdown();
+    $('.dropdown-button').dropdown('open');
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  </script>
 </html>
